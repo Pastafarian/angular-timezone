@@ -1,0 +1,11 @@
+<div style="display: flex;  justify-content: center;">
+  <form [formGroup]="formGroup">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="datePicker" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker [startAt]="startDate" #picker startView="year"></mat-datepicker>
+    </mat-form-field>
+
+    <input type="button" name="Go" (click)="go()" />
+  </form>
+</div>
